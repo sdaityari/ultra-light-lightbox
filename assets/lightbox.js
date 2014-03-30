@@ -52,25 +52,6 @@ var lightbox = lightbox || {};
 
         var content = $("." + selectors.content);
 
-/*        if (!content.length){
-            content = $("<div />", {
-                "id" : "light",
-                "class" : selectors.content
-            }).appendTo($("body"));
-
-            var overlay = $("<div />", {
-                "id" : "dark",
-                "class" : selectors.overlay
-            }).after(content);
-
-            var cross = $("<a />", {
-                "id" : "cross",
-                "href" : "#",
-                "html" : "&#10007;",
-                "onclick" : "lightbox.hide();"
-            }).appendTo(content);
-        }*/
-
         if (!image_source) {
             return;
         }
@@ -102,6 +83,6 @@ var lightbox = lightbox || {};
         if (e.keyCode == 27) { // Escape key is pressed
             hide();
         }
-    })
+    });
 
 })(lightbox, jQuery);
