@@ -83,12 +83,25 @@ var lightbox = lightbox || {};
 
     };
 
-    $("#" + selectors.cross).click(function () {
-
+    var hide = function () {
         $("." + selectors.content).find("img").remove();
         $("." + selectors.content).hide();
         $("." + selectors.overlay).hide();
 
+    };
+
+    $("#" + selectors.cross).click(function () {
+        hide();
     });
+
+    $("." + selectors.overlay).click(function () {
+        hide();
+    })
+
+    $("body").keyup( function (e) {
+        if (e.keyCode == 27) { // Escape key is pressed
+            hide();
+        }
+    })
 
 })(lightbox, jQuery);
