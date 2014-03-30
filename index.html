@@ -1,0 +1,31 @@
+<html>
+    <head>
+        <title>Ultra light lightbox</title>
+        <link rel="stylesheet" type="text/css" href="assets/styles.css" />
+        <link rel="stylesheet" type="text/css" href="assets/lightbox.css" />
+    </head>
+    <body>
+        <div id="container">
+            <h1>CSS Lightbox demo</h1> <hr />
+            Click on any of the images below to load the lightbox.<br /><br />
+            <img class="image-lightbox" src="images/1.png" data-source="images/A.png" />
+            <img class="image-lightbox" src="images/2.png" data-source="images/B.png" />
+            <img class="image-lightbox" src="images/3.png" data-source="images/C.png" />
+            <img class="image-lightbox" src="images/4.png" data-source="images/D.png" />
+            <img class="image-lightbox" src="images/5.png" data-source="images/E.png" />
+            <br /><br />
+            Let's try some different aspect ratios.<br />
+            <img class="image-lightbox" src="images/m.jpg" data-source="images/makelele.jpg" />
+            <img class="image-lightbox" src="images/a.jpg" data-source="images/anelka.jpg" />
+        </div>
+
+        <div id="light" class="white_content"><a href="#" id="cross">&#10007;</a></div>
+        <div id="fade" class="black_overlay"></div>
+
+        <script type="text/javascript" src="lib/jquery-1.11.0.min.js"></script>
+        <script type="text/javascript" src="assets/lightbox.js"></script>
+        <script type="text/javascript">
+            lightbox.init(".image-lightbox");
+        </script>
+    </body>
+</html>
